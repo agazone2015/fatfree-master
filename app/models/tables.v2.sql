@@ -74,3 +74,20 @@ COLLATE='latin1_swedish_ci'
 ENGINE=InnoDB
 AUTO_INCREMENT=30
 ;
+
+/* User table */
+CREATE TABLE `users` (
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `password` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',
+    `email` VARCHAR(150) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+    `mobile` VARCHAR(20) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+    `address` VARCHAR(255) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+    PRIMARY KEY (`id`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=MyISAM
+ROW_FORMAT=DYNAMIC
+AUTO_INCREMENT=24
+;
+
