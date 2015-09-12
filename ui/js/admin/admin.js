@@ -53,18 +53,18 @@ var Grid = {
             { field: 'description',      caption: 'Search by Description',   type: 'text' }
         ],
         columns: [
-            { field: 'category',  caption: 'Category',    size: '20%',
+            { field: 'category',  caption: 'Category',    size: '145px',
                     editable: { type: 'list', items: categories, showAll: true, inTag: 'Category name' },
                     render: function (r, i, c_i) {
                         return r.category.text || '???';
                     }},
-            { field: 'itemName',    caption: 'Item Name',   size: '20%',  sortable: true },
-            { field: 'description', caption: 'Description', size: '40%'},
-            { field: 'price',       caption: 'Price',       size: '10%',  sortable: true, editable: {type: 'money'}, render: 'money'},
+            { field: 'itemName',    caption: 'Item Name',   size: '20%',  sortable: true, editable: {type: 'text'} },
+            { field: 'description', caption: 'Description', size: '40%',  editable: {type: 'text'}},
+            { field: 'price',       caption: 'Price',       size: '120px',  sortable: true, editable: {type: 'money'}, render: 'money'},
             { field: 'isActive',    caption: 'Active',      size: '60px', sortable: true, editable: {type: 'checkbox'} },
-            { field: 'isVegetarian',caption: 'Vegetarian',  size: '80px', sortable: true, editable: {type: 'checkbox'} },
-            { field: 'isPopular',   caption: 'Popular',     size: '60px', sortable: true, editable: {type: 'checkbox'} },
-            { field: 'isSpecial',   caption: 'Special',     size: '60px', sortable: true, editable: {type: 'checkbox'} },
+            { field: 'isVegetarian',caption: 'Vegetarian',  size: '90px', sortable: true, editable: {type: 'checkbox'} },
+            { field: 'isPopular',   caption: 'Popular',     size: '80px', sortable: true, editable: {type: 'checkbox'} },
+            { field: 'isSpecial',   caption: 'Special',     size: '80px', sortable: true, editable: {type: 'checkbox'} },
         ],
         toolbar: {
             items: [

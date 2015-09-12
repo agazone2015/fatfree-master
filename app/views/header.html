@@ -22,7 +22,7 @@
                 <li><a href="">Home</a></li>
                 <li><a href="">Richmond Menu</a></li>
                 <li><a href="">Malvern Menu</a></li>
-                <li><a href="">Find Us</a></li>
+                <li><a href="findus">Find Us</a></li>
             </ul>
         </nav>
         <section id="socialMedia">

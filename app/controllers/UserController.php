@@ -2,10 +2,16 @@
     class UserController extends Controller {
 
         public function index() {
-            $user = new User($this->db);
-            $this->f3->set('users',$user->all());
+            $item = new Item($this->db);
+            $this->f3->set('specials', $item->getSpecial());
+
             $this->f3->set('page_head','All Items');
             $this->f3->set('view','user/home.html');
+
+            $info = new Info($this->db);
+            $information = $info->all()[0];
+            $this->f3->set('isPromotionOn', $information->isPromotionOn);
+            $this->f3->set('isSpecialOn', $information->isSpecialOn);
         }
 
         /*
@@ -81,11 +87,6 @@
 
             // go back to home page after delete
             $this->f3->reroute('/');
-        }
-
-        public function admin() {
-            $this->f3->set('page_head','Admin Login');
-            $this->f3->set('view','user/admin.html');
         }
 
         public function menu () {
