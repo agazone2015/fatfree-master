@@ -4,6 +4,14 @@
 $f3=require('lib/base.php');
 $f3->config('config/config.ini');
 $f3->config('config/routes.ini');
+//$f3->route('GET /admin', function ($f3) {
+//   echo "???";
+//});
+//$f3->route('GET|POST /admin/login', function ($f3) {
+//    if ($f3->exists('GET.name')) {
+//        echo $f3->get('GET.name');
+//    }
+//});
 $f3->run();
 
 

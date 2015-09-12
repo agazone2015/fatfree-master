@@ -1,5 +1,5 @@
 <?php
-    class Item extends DB\SQL\Mapper {
+    class Info extends DB\SQL\Mapper {
 
         public function __construct(DB\SQL $db) {
             parent::__construct($db,'information');
@@ -20,8 +20,8 @@
 //            $this->copyTo('POST');
 //        }
 
-        public function edit($id) {
-            $this->load(array('infoId=?',$id));
+        public function edit() {
+            $this->load(array('infoId=?',1));
             $this->copyFrom('POST');
             $this->update();
         }

@@ -1,0 +1,13 @@
+<div class="navbar">
+    <ul class="nav">
+        <li <check if="{{ @page_nav == 1 }}">class="active"</check>>
+            <a href="{{ @BASE.'/admin/dashboard' }}"><i class="fa fa-home"></i> Cafes</a>
+        </li>
+        <li <check if="{{ @page_nav == 2 }}">class="active"</check>>
+            <a href="{{ @BASE.'/admin/categories' }}"><i class="fa fa-list"></i> Categories</a>
+        </li>
+        <li <check if="{{ @page_nav == 2 }}">class="active"</check>>
+            <a href="{{ @BASE.'/admin/items'}}"><i class="fa fa-th-large"></i> Items</a>
+        </li>
+    </ul>
+</div>

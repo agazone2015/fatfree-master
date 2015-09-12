@@ -10,8 +10,8 @@
 -->
             <th scope="col">Name</th>
             <th scope="col">Supplier</th>
-            <th scope="col">Code</th>
-            <th scope="col">Address</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
             <th scope="col">Action</th>
         </tr>
     </thead>

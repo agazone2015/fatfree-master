@@ -4,7 +4,7 @@
         <?php else: ?><script src="http://code.jquery.com/jquery.js"></script>
     <?php endif; ?>
 
-    <script src="../../ui/js/bootstrap.min.js"></script>
- 
+<!--    <script src="../../ui/js/bootstrap.min.js"></script>-->
+    <script src="ui/js/gllow.js"></script>
     </body>
 </html>

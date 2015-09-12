@@ -4,8 +4,8 @@
         public function index() {
             $user = new User($this->db);
             $this->f3->set('users',$user->all());
-            $this->f3->set('page_head','Item List');
-            $this->f3->set('view','user/list.html');
+            $this->f3->set('page_head','All Items');
+            $this->f3->set('view','user/home.html');
         }
 
         /*
@@ -29,7 +29,7 @@
             */
             else {
                 $this->f3->set('site', 'Gllow - New User');
-                $this->f3->set('page_head','Create User');
+                $this->f3->set('page_head','Create Item');
                 $this->f3->set('view','user/create.html');
             }
         }
@@ -42,8 +42,13 @@
         public function update() {
             $user = new User($this->db);
             /*
-            * check if POST request has create field
+            * check if POST request has created field
             * if yes, add user and return home
+            * !! what happens when edit
+            *   1. $user load record into memory according to POST.id
+            *   2. copy value from POST request to record
+            *   3. update back into database
+            *
             */
             if($this->f3->exists('POST.update')) {
                 $user->edit($this->f3->get('POST.id'));
@@ -79,7 +84,8 @@
         }
 
         public function admin() {
-            $this->f3->set('view', 'user/admin.html');
+            $this->f3->set('page_head','Admin Login');
+            $this->f3->set('view','user/admin.html');
         }
 
         public function menu () {

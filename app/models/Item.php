@@ -10,8 +10,18 @@
             return $this->query;
         }
 
+        public function getAllByCafeId ($cafeId) {
+            $this->load(array('cafeId=?', $cafeId));
+            return $this->query;
+        }
+
         public function add() {
             $this->copyFrom('POST');
+            $this->save();
+        }
+
+        public function addFromParam() {
+            $this->copyFrom('PARAMS');
             $this->save();
         }
 
