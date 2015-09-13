@@ -26,6 +26,12 @@
                 <div><input name="isSpecialOn" type="checkbox" class="w2ui-input1 w2ui-toggle"/><div><div></div></div ></div> <i class="tgIndicator specialTgIndicator"></i>
             </div>
             <div class="w2ui-field">
+                <label>Description <br/> of Promotion:</label>
+                <div>
+                    <textarea name="promotion" type="text" style="width: 385px; height: 130px; resize: none"></textarea>
+                </div>
+            </div>
+            <div class="w2ui-field">
                 <label>About-Us Text:</label>
                 <div>
                     <textarea name="about" type="text" style="width: 385px; height: 180px; resize: none"></textarea>

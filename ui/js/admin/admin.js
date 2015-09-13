@@ -238,6 +238,7 @@ $().w2form({
                         html: ('<div class="ajaxMsg"><div class="ajaxMsgContent">{0}</div><div class="ajaxMsgControl"><button class="btn btn-green center-y" onclick="w2popup.message(); w2popup.close();">Close</button></div></div>'
                               .format(result.message))
                     });
+                    Grid.setup();
                 }
             });
         },
@@ -288,7 +289,8 @@ $('#specialForm').w2form({
         { field: 'about',           type: 'text', },
         { field: 'isPriceOn',       type: 'toggle'},
         { field: 'isPromotionOn',   type: 'toggle'},
-        { field: 'isSpecialOn',     type: 'toggle'}
+        { field: 'isSpecialOn',     type: 'toggle'},
+        { field: 'promotion',       type: 'text'  }
     ],
     actions: {
         reset: function () {

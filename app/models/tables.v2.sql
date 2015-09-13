@@ -7,7 +7,7 @@ CREATE TABLE `cafes` (
 )
 COLLATE='latin1_swedish_ci'
 ENGINE=InnoDB
-AUTO_INCREMENT=3
+AUTO_INCREMENT=1
 ;
 
 
@@ -20,7 +20,7 @@ CREATE TABLE `categories` (
 )
 COLLATE='latin1_swedish_ci'
 ENGINE=InnoDB
-AUTO_INCREMENT=23
+AUTO_INCREMENT=1
 ;
 
 /* Item Table */
@@ -44,7 +44,7 @@ CREATE TABLE `items` (
 )
 COLLATE='latin1_swedish_ci'
 ENGINE=InnoDB
-AUTO_INCREMENT=35
+AUTO_INCREMENT=1
 ;
 
 /* extra tables*/
@@ -88,6 +88,6 @@ CREATE TABLE `users` (
 COLLATE='utf8_general_ci'
 ENGINE=MyISAM
 ROW_FORMAT=DYNAMIC
-AUTO_INCREMENT=24
+AUTO_INCREMENT=1
 ;
 

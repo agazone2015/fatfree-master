@@ -7,28 +7,32 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900italic,900,700italic,400italic,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="ui/css/font-awesome.min.css">
+    <link rel="stylesheet" href="ui/css/colorbox.css">
     <title>{{ @site }}</title>
     <!-- Bootstrap -->
     <!--        <link href="../../ui/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <check if="{{@isRichmond || @isMalvern || @isHome}}">
+        <link rel="stylesheet" href="ui/css/perfect-scrollbar.min.css">
+    </check>
     <link rel="stylesheet" href="ui/css/style.css">
 </head>
 
 <body>
     <div id="container">
-        <div id="background"></div>
+        <div id="background" class="{{@isBlurred}}"></div>
         <div id="logo"><img src="ui/img/Gllow_logo5.png"/></div>
-        <nav>
+        <nav id="navbar">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Richmond Menu</a></li>
-                <li><a href="">Malvern Menu</a></li>
-                <li><a href="findus">Find Us</a></li>
+                <li><a class="{{@isHome}}" href="">Home</a></li>
+                <li><a class="{{@isRichmond}}" href="Richmond/menu">Richmond Menu</a></li>
+                <li><a class="{{@isMalvern}}" href="Malvern/menu">Malvern Menu</a></li>
+                <li><a class="{{@isCafes}}" href="cafes">Find Us</a></li>
             </ul>
         </nav>
         <section id="socialMedia">
             <ul>
-                <li class="socialMedia"><a href="" title="Find us on Facebook"><img src="ui/img/media/facebook.png"/></a></li>
-                <li class="socialMedia"><a href="" title="Find us on Twitter"><img src="ui/img/media/twitter.png"/></a></li>
-                <li class="socialMedia"><a href="" title="Find us on Instagram"><img src="ui/img/media/instagram.png"/></a></li>
+                <li class="socialMedia"><a href="" target="_blank" title="Find us on Facebook"><img src="ui/img/media/facebook.png"/></a></li>
+                <li class="socialMedia"><a href="" target="_blank" title="Find us on Twitter"><img src="ui/img/media/twitter.png"/></a></li>
+                <li class="socialMedia"><a href="" target="_blank" title="Find us on Instagram"><img src="ui/img/media/instagram.png"/></a></li>
             </ul>
         </section>

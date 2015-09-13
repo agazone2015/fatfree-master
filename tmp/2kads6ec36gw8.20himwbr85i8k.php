@@ -5,6 +5,12 @@
     <?php endif; ?>
 
 <!--    <script src="../../ui/js/bootstrap.min.js"></script>-->
-    <script src="ui/js/gllow.js"></script>
+    <?php if ($isRichmond || $isMalvern || $isHome): ?>
+        <script type="text/javascript" src="ui/js/perfect-scrollbar.jquery.min.js"></script>
+    <?php endif; ?>
+    <script src="ui/js/jquery.colorbox-min.js"></script>
+    <?php if ($isRichmond || $isMalvern): ?>
+        <script src="ui/js/gllow.js"></script>
+    <?php endif; ?>
     </body>
 </html>

@@ -1,0 +1,29 @@
+<script>var pictures = {{@pictureArray}};</script>
+<section id="menu" data-id="{{@cafeId}}">
+    <nav id="menuBar">
+        <ul>
+            <repeat group="{{ @categories }}" value="{{ @category }}">
+                <li class="menuItem" data-id="{{@category.categoryId}}"><span>{{@category.categoryName}}</span></li>
+            </repeat>
+        </ul>
+    </nav>
+    <div id="carouselContainer">
+        <div class="carousel">
+        </div>
+    </div>
+    <div id="menuListContainer">
+        <ul id="menuList">
+            <repeat group="{{ @items }}" value="{{ @item }}">
+                <li class="item">
+                    <span class="itemHeader">{{@item.itemName}}
+                        <check if="{{ @item.isPopular }}"><i class="fa fa-star" title="Recommended Dish"></i></check>
+                        <check if="{{ @item.isVegetarian}}"><img src="ui/img/icons/vegetarian.png" title="Vegetarian/Optional"/></check>
+                    </span>
+                    <span class="itemDescription">{{ @item.description }}</span>
+                    <span class="itemPrice">${{ @item.price }}</span>
+                </li>
+            </repeat>
+        </ul>
+    </div>
+
+</section>

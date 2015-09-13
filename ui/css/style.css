@@ -6,25 +6,19 @@ h1 { margin: 0; }
 #container { height: 100%; }
 #background { position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     background-color: lightgreen;background-image: url(../img/background/background.png);
-    background-position: centercenter; background-size: cover; background-repeat: no-repeat; z-index: -1;}
-
+    background-position: center center; background-size: cover; background-repeat: no-repeat; z-index: -1;}
+#background.blur {  filter: blur(5px); -webkit-filter: blur(5px); }
 #logo img { height: 200px; }
-nav { display: inline-block; width: 350px; position: absolute; top: 50%; transform: translateY(-50%);}
-nav li { padding: 10px; }
-nav li a {
-    display: inline-block;
-    padding: 15px;
-    background-color: #be1b21;
-    color: white;
-    text-decoration: blink;
-    width: 220px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bolder;
-     box-shadow: 0 0 55px black;
+#navbar { display: inline-block; width: auto; position: absolute; top: 50%; transform: translateY(-50%);}
+#navbar li { padding: 10px; }
+#navbar li a {
+    display: inline-block; padding: 15px; background-color: #be1b21;
+    color: white; text-decoration: blink; width: 220px; text-align: center;
+    font-size: 24px; font-weight: bolder; box-shadow: 0 0 55px black;
     /* box-shadow: 0 0 55px white; */
     border: 2px solid white;}
-nav li a:hover { text-shadow: 0 0 25px white; color: black;}
+#navbar li a:hover { text-shadow: 0 0 25px white; color: black;}
+#navbar li a.active { background-color: white; border-color: red; color: red; }
 #specialMenu {
     position: absolute; right: 0; top: 0; width: 350px; height: auto; background-color: rgba(0,0,0,0.7); padding-bottom: 30px;
 }
@@ -32,8 +26,9 @@ nav li a:hover { text-shadow: 0 0 25px white; color: black;}
     font-size: 35px;font-weight: bold; font-style: italic; color: white; display: block; text-align: center;
     margin-top: 10px;
 }
+#specialContentWrapper { max-height: 450px; overflow: hidden; position: relative; top: 30px;}
 #specialContent {
-    position: relative; top: 30px; width: 100%; height: auto;
+    position: relative; width: 100%; height: auto;
 }
 #specialContent li { padding: 5px 5px 25px 20px; border-bottom: 1px solid rgba(255,255,255,0.2); position: relative;}
 .itemName { color: white; font-weight: bold; text-transform: capitalize; text-decoration: none; font-size: 22px;}
@@ -51,3 +46,64 @@ nav li a:hover { text-shadow: 0 0 25px white; color: black;}
 .socialMedia a { }
 .socialMedia img { width: 50px; height: 50px; opacity: 0.9; }
 .socialMedia img:hover { opacity: 1; transform: scale(1.2)}
+
+/* CSS for Menu page
+===========================*/
+#menu { position: absolute; top: 210px; left: 290px; height: calc(100% - 210px); width: calc(100% - 340px);
+        border-top-left-radius: 5px; border-top-right-radius: 5px;
+        background-color: rgba(0,0,0,0.8); box-sizing: border-box; padding: 10px;}
+#menuBar { background-color: #be1b21; }
+#menuBar ul { font-size: 0;}
+#menuBar ul .menuItem { display: inline-block; border-bottom: 2px solid transparent; cursor: pointer; color: white;}
+#menuBar ul .menuItem span { display: inline-block; padding: 7px 12px; font-size: 18px; font-weight: bold;}
+#menuBar ul .menuItem:hover { border-bottom-color: white; }
+#menuBar ul .menuItem.active { background-color: white; color: red; border-color: green; font-weight: bold;}
+
+#carouselContainer { height: 350px; padding-top: 5px; overflow: hidden; position: relative; }
+.carousel { height: 350px; font-size: 0; white-space: nowrap; display: inline-block; min-width: 100%; width: auto; overflow: visible;}
+.carousel .carouselItem { display: inline-block; width: 100%; height: 350px; background-repeat: no-repeat; background-color: white;
+        background-size: 80%; background-position: 40% 40%; transition: 0.5s; cursor: pointer; position: relative;}
+#carouselContainer .carouselBtn { display: inline-block; width: auto; height: auto; position: absolute; top: 50%; transform: translateY(-50%); z-index: 1;
+        padding: 5px; color: #be1b21; background-color: transparent; border: 1px solid transparent; font-size: 30px; transition: 0.3s;
+        outline: none;}
+#carouselContainer .carouselBtn:hover { text-shadow: 0 1px 5px #333, 0 2px 5px #333;}
+#carouselContainer .carouselBtn#prevItem { left: 0; border-left: none;}
+#carouselContainer .carouselBtn#nextItem { right: 0; border-right: none;}
+
+#menuListContainer { position: relative; margin-top: 10px; width: 100%; height: calc(100% - 400px); }
+#menuList { height: 100%; position: relative; }
+#menuList .item { position: relative; min-height: 40px; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding: 4px; padding-top: 10px; padding-left: 15px; }
+#menuList .item .itemHeader { font-size: 20px; color: white; font-weight: bold;}
+#menuList .item .itemHeader img { width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-left: 5px;}
+#menuList .item .itemHeader i { color: yellow; margin-left: 5px;}
+#menuList .item .itemDescription { display: block; color: white; font-style: italic; font-size: 14px; padding: 5px; text-indent: 5px;}
+#menuList .item .itemPrice { position: absolute; display: inline-block; right: 31px; top: 50%; transform: translateY(-50%); padding: 5px;
+        background-color: green; color: white; width: 50px; text-align: right;}
+
+/* CSS for Find Us page
+===========================*/
+#mapContainer { position: absolute; left: 290px; top: 225px; width: calc(100% - 340px); height: calc(100% - 400px); background-color: aliceblue;
+        box-sizing: border-box; box-shadow: 0 0 15px #1e1e1e;}
+#map { position: relative; width: 100%; height: 100%;}
+#loadMask { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); display: none;}
+#loadMask span { color: white; text-shadow: 0 0 10px white; display: inline-block; position: absolute; left: 0; right: 0; margin: auto;
+        top: 50%; transform: translateY(-50%); width: auto; height: auto; text-align: center; font-size: 50px;}
+
+#searchBox { position: absolute; bottom: calc(100% - 81px); left: 10px; border: 2px solid green; background-color: #be1b21; height: auto; width: auto; padding: 5px;}
+#searchBox label { color: white; padding: 5px; display: block;}
+#searchBox input { line-height: 24px; border: 1px solid lightcoral; margin-left: 5px; width: 140px; text-indent: 5px;}
+#searchBox button { line-height: 20px; padding: 2px; font-family: font-family: 'Droid Serif', serif;}
+
+.infoWindow { }
+.infoWindow > span { display: block; }
+
+#result { display: none; position: relative; padding-top: 10px;}
+#result span { display: block; padding: 3px; color: white; margin-left: 20px;}
+#result i { position: absolute; top: 14px; color: white;}
+
+#searchBox.done { bottom: 15px; transition: 1s; }
+
+#about { bottom: 0; position: absolute; left: 290px; right: 0; width: calc(100% - 340px); height: 150px;
+    background-color: rgba(0,0,0,0.8); padding: 5px 15px 10px; box-sizing: border-box; }
+#aboutHeader { font-size: 32px;font-weight: bold; font-style: italic; color: white; display: block;}
+#about p { text-align: justify; text-indent: 15px; color: white; font-size: 16px; font-style: italic;}

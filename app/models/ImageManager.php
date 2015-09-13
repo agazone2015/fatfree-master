@@ -15,6 +15,17 @@
             $this->save();
         }
 
+        /*
+        * [POST]
+        * Description
+        */
+        public function allForMenu () {
+            // TODO:
+            $this->load(array('isIncluded', 1));
+            return $this->query;
+        }
+
+
         public function getById($id) {
             $this->load(array('imageId=?',$id));
             return $this->query;
