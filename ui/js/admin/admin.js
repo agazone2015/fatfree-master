@@ -619,7 +619,9 @@ function setupImageUploadPanel () {
             $('#file').click();
         });
         $('#uploadBtn').click(function () {
-            uploadFiles();
+            var items = $('#fileSelectedList').find('.thumbnail').length;
+            if (items === 0) { $('#file').click(); }
+            else { uploadFiles(); }
         });
         $('#clearBtn').click(function () {
             $('#fileSelectedList').html('');

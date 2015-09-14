@@ -53,7 +53,12 @@ tr[id$='rec_bottom'] { display: none!important;}
 .w2ui-toolbar table.w2ui-button.checked .w2ui-tb-caption, .w2ui-toolbar table.w2ui-button.checked .w2ui-tb-image {
     color: aliceblue;
 }
-
+.w2ui-grid .w2ui-grid-body .w2ui-grid-records table tr.w2ui-even:hover {
+    background-color: #be1b21; color: white;
+}
+.w2ui-grid .w2ui-grid-body .w2ui-grid-records table tr.w2ui-odd:hover {
+    background-color: #be1b21; color: white;
+}
 /*
 * File upload CSS
 */
@@ -62,7 +67,7 @@ tr[id$='rec_bottom'] { display: none!important;}
 #uploadForm { width: 100%; height: calc(100% - 37px); position: relative;}
 #fileHandler { display: inline-block; width: 400px; height: 150px; border: 3px dashed silver; text-align: center; position: relative; border-radius: 5px;}
 .uploadHint { display: inline-block; color: #909090; width: 270px; }
-#fileSelected { position: absolute; left: 500px; top: 0; width: 500px; height: 100%; box-sizing: border-box; padding: 5px; overflow-x: hidden; overflow-y: auto;}
+#fileSelected { position: absolute; left: 420px; top: 0; width: 500px; height: 100%; box-sizing: border-box; padding: 5px; overflow-x: hidden; overflow-y: auto;}
 #fileSelectedList { height: calc(100% - 20px); overflow-x: hidden; overflow-y: auto;}
 #fileSelectedList .thumbnail { padding: 5px; border: 1px dashed lightcoral; margin: 5px; position: relative;}
 #fileSelectedList .thumbnail .thumb-remove { position: absolute; right: 5px; top: 3px; color: #2B4E71; cursor: pointer;}

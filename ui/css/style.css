@@ -47,8 +47,14 @@ h1 { margin: 0; }
 #socialMedia { width: 160px; text-align: center; position: absolute; top: 75%; }
 .socialMedia { padding: 6px 0; position: relative;}
 .socialMedia a { }
-.socialMedia img { width: 50px; height: 50px; opacity: 0.9; }
+.socialMedia img { width: 50px; height: 50px; opacity: 0.9;  }
 .socialMedia img:hover { opacity: 1; transform: scale(1.2)}
+.socialMedia .smHint { display: inline-block; position: absolute; left: 110px; top: 50%; transform: translateY(-50%); width: auto; height: auto; white-space: nowrap;
+        box-sizing: border-box; background-color: #be1b21; padding: 5px; color: white;
+        opacity: 0; visibility: hidden; transition: 0.3s; box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white; font-size: 12px; text-decoration: none; }
+.socialMedia .smHint:after { content: ''; display: block; position: absolute; top: 50%; transform: translateY(-50%); right: 100% ; border: 6px solid transparent; border-right-color: #be1b21;
+        }
+.socialMedia img:hover + .smHint { opacity: 1; visibility: visible; left: 125px;}
 
 /* CSS for Menu page
 ===========================*/
@@ -79,7 +85,7 @@ h1 { margin: 0; }
 #menuList .item .itemHeader { font-size: 20px; color: white; font-weight: bold;}
 #menuList .item .itemHeader img { width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-left: 5px;}
 #menuList .item .itemHeader i { color: yellow; margin-left: 5px;}
-#menuList .item .itemDescription { display: block; color: white; font-style: italic; font-size: 14px; padding: 5px; text-indent: 5px;}
+#menuList .item .itemDescription { display: block; color: white; font-style: italic; font-size: 14px; padding: 5px; text-indent: 5px; margin-right: 80px;}
 #menuList .item .itemPrice { position: absolute; display: none; right: 31px; top: 50%; transform: translateY(-50%); padding: 5px;
         background-color: green; color: white; width: 50px; text-align: right;}
 #menuList.showPrice .itemPrice { display: inline-block; }

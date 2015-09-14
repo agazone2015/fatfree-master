@@ -31,8 +31,8 @@
         </nav>
         <section id="socialMedia">
             <ul>
-                <li class="socialMedia"><a href="" target="_blank" title="Find us on Facebook"><img src="ui/img/media/facebook.png"/></a></li>
-                <li class="socialMedia"><a href="" target="_blank" title="Find us on Twitter"><img src="ui/img/media/twitter.png"/></a></li>
-                <li class="socialMedia"><a href="" target="_blank" title="Find us on Instagram"><img src="ui/img/media/instagram.png"/></a></li>
+                <li class="socialMedia"><a href="https://www.facebook.com/gllow2?fref=ts" target="_blank" ><img src="ui/img/media/facebook.png"/><span class="smHint">Find us on Facebook</span></a></li>
+                <li class="socialMedia"><a href="" target="_blank" ><img src="ui/img/media/twitter.png"/><span class="smHint">Find us on Twitter</span></a></li>
+                <li class="socialMedia"><a href="" target="_blank" ><img src="ui/img/media/instagram.png"/><span class="smHint">Find us on Instagram</span></a></li>
             </ul>
         </section>
