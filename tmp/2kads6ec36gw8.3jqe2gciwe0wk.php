@@ -1,4 +1,4 @@
-<script>var pictures = <?php echo $pictureArray; ?>;</script>
+<script></script>
 <section id="menu" data-id="<?php echo $cafeId; ?>">
     <nav id="menuBar">
         <ul>
@@ -9,13 +9,17 @@
     </nav>
     <div id="carouselContainer">
         <div class="carousel">
+            <?php foreach (($pictureArray?:array()) as $picture): ?>
+                <div class="carouselItem" data-link="<?php echo $picture; ?>" style="background-image:url(<?php echo $picture; ?>)"></div>
+            <?php endforeach; ?>
         </div>
     </div>
     <div id="menuListContainer">
-        <ul id="menuList">
+        <ul id="menuList" <?php if ($isPriceOn): ?>class="showPrice"<?php endif; ?>>
             <?php foreach (($items?:array()) as $item): ?>
                 <li class="item">
                     <span class="itemHeader"><?php echo $item['itemName']; ?>
+
                         <?php if ($item['isPopular']): ?><i class="fa fa-star" title="Recommended Dish"></i><?php endif; ?>
                         <?php if ($item['isVegetarian']): ?><img src="ui/img/icons/vegetarian.png" title="Vegetarian/Optional"/><?php endif; ?>
                     </span>

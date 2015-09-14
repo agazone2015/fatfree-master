@@ -11,6 +11,9 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900italic,900,700italic,400italic,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="ui/css/font-awesome.min.css">
     <link rel="stylesheet" href="ui/css/colorbox.css">
+    <link rel="stylesheet" href="ui/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="ui/css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="ui/css/jquery-ui.theme.min.css">
     <link rel="stylesheet" href="ui/css/admin/admin-theme.css">
 <!--    <link rel="stylesheet" href="ui/css/admin/admin.css">-->
 </head>
@@ -37,6 +40,7 @@
         */
         window.base = document.getElementsByTagName('base')[0].getAttribute('href');
     </script>
+    <script src="ui/js/jquery-ui.min.js"></script>
     <script src="ui/js/admin/admin.js"></script>
 </body>
 

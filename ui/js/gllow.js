@@ -24,6 +24,7 @@ $(document).on('click', '.menuItem', function (event) {
                         '<span class="itemPrice">$'+records[i].price.format(2,3) +'</span>' +
                     '</li>');
                 }
+                $('#menuListContainer').perfectScrollbar('update');
             }
         }
     })
@@ -31,14 +32,9 @@ $(document).on('click', '.menuItem', function (event) {
 
 var cafeId       = $('#menu').attr('data-id');
 var currentIndex = 0;
-var totalLenth   = pictures.length;
 var carousel     = $('.carousel').first();
 var sliderWidth  = carousel.width();
 var sliderHeight = carousel.height();
-
-$.each(pictures, function (i, e) {
-    $('.carousel').append('<div data-index="'+i+'" class="carouselItem" style="background-image:url('+e+'); " data-link="'+e+'"></div>');
-});
 
 //carousel.width(totalLenth * sliderWidth);
 carousel.find('.carouselItem:last-child').prependTo(carousel);

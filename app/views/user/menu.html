@@ -1,4 +1,4 @@
-<script>var pictures = {{@pictureArray}};</script>
+<script></script>
 <section id="menu" data-id="{{@cafeId}}">
     <nav id="menuBar">
         <ul>
@@ -9,10 +9,13 @@
     </nav>
     <div id="carouselContainer">
         <div class="carousel">
+            <repeat group="{{ @pictureArray }}" value="{{ @picture }}">
+                <div class="carouselItem" data-link="{{@picture}}" style="background-image:url({{@picture}})"></div>
+            </repeat>
         </div>
     </div>
     <div id="menuListContainer">
-        <ul id="menuList">
+        <ul id="menuList" <check if="{{@isPriceOn}}">class="showPrice"</check>>
             <repeat group="{{ @items }}" value="{{ @item }}">
                 <li class="item">
                     <span class="itemHeader">{{@item.itemName}}

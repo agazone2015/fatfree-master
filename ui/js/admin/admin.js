@@ -301,9 +301,30 @@ $('#specialForm').w2form({
         },
         preview: function () {
             // display preview;
-            window.open('http://localhost/fatfree-master/', '', 'menubar=0, width=500, height=500, location=0,')
-        }
+            window.open('http://localhost/fatfree-master/', '', 'menubar=0, width=1366, height=768, location=0,');
+        },
+        preview2: function () {
+            window.open('http://localhost/fatfree-master/', '', 'menubar=0, width=1280, height=800, location=0');
+        },
+        ipadLand: function () {
+            window.open('http://localhost/fatfree-master/', '', 'menubar=0, width=1024, height=768, location=0');
+        },
+        ipadPort: function () {
+            window.open('http://localhost/fatfree-master/', '', 'menubar=0, width=768, height=1024, location=0');
+        },
+        iphoneLand: function () {
+            window.open('http://localhost/fatfree-master/', '', 'menubar=0, width=568, height=325, location=0');
+        },
+        iphonePort: function () {
+            window.open('http://localhost/fatfree-master/', '', 'menubar=0, width=325, height=568, location=0');
+        },
     },
+//    "preview" title="Preview Website as a medium size WIDE screen laptop"><i class="fa fa-laptop"></i> Wide Screen(Med)
+//"preview2" title="Preview Website as a small size wide screen laptop"><i class="fa fa-laptop"></i> Wide Screen(Smal
+//"preview3" title="Preview Website as an iPad - Landscape"><i class="fa fa-tablet"></i> iPad (Land)</button>
+//"preview4" title="Preview Website as an iPad - Portrait"><i class="fa fa-tablet"></i> iPad (Port)</button>
+//"preview5" title="Preview Website as an iPad - Portrait"><i class="fa fa-mobile-phone"></i> iPhone (Land)</button>
+//"preview6" title="Preview Website as an iPad - Portrait"><i class="fa fa-mobile-phone"></i> iPhone (Port)</button>
     style: 'border-radius: 0;',
     onChange: function (event) {
         if (event.target === 'isPriceOn') {
@@ -503,12 +524,12 @@ $(function () {
                         { type: 'radio',  id: 'imagePanel',     group: '1', caption: 'Image Control',       img: 'fa fa-picture-o tb-icon'},
                         { type: 'radio',  id: 'upload',         group: '1', caption: 'Upload Image',        img: 'fa fa-upload tb-icon'},
                         { type: 'break',  id: 'break0' },
-                        { type: 'menu',   id: 'item4', caption: 'Drop Down', img: 'icon-folder', items: [
-                            { text: 'Item 1', icon: 'icon-page' },
-                            { text: 'Item 2', icon: 'icon-page' },
-                            { text: 'Item 3', value: 'Item Three', icon: 'icon-page' }
-                        ]},
-                        { type: 'break', id: 'break1' },
+//                        { type: 'menu',   id: 'item4', caption: 'Drop Down', img: 'icon-folder', items: [
+//                            { text: 'Item 1', icon: 'icon-page' },
+//                            { text: 'Item 2', icon: 'icon-page' },
+//                            { text: 'Item 3', value: 'Item Three', icon: 'icon-page' }
+//                        ]},
+//                        { type: 'break', id: 'break1' },
                         { type: 'spacer' },
                     ],
                     onClick: function (event) {
@@ -529,6 +550,10 @@ $(function () {
     });
     w2ui.layout.content('main', w2ui.mainPanel);
     // ========================================
+
+    $(document).tooltip({
+        delay: 0
+    });
 
     /*
     * [AJAX POST]

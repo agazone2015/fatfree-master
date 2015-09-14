@@ -45,6 +45,9 @@
             $this->f3->set('categories', $categories);
             $firstCategory = $categories[0]->categoryId;
 
+            $info       = new Info($this->db);
+            $this->f3->set('isPriceOn', $info->all()[0]->isPriceOn);
+
             // setup for client
             $clientArray = array();
             foreach ($menuImages as $menuImage) {
@@ -56,7 +59,7 @@
             $this->f3->set('items', $items->getAllByCategoryId($cafeId, $firstCategory));
 
 
-            $this->f3->set('pictureArray', json_encode($clientArray, JSON_NUMERIC_CHECK));
+            $this->f3->set('pictureArray', $clientArray);
             $this->f3->set('ESCAPE', false);
 
 

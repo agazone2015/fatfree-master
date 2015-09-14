@@ -14,7 +14,7 @@
     <div id="specialForm" style="width: 750px;">
         <div class="w2ui-page page-0">
             <div class="w2ui-field">
-                <label>Price on Menu page:</label>
+                <label>Show Price On Menu:</label>
                 <div><input name="isPriceOn" type="checkbox" class="w2ui-input1 w2ui-toggle"/><div><div></div></div></div> <i class="tgIndicator priceTgIndicator"></i>
             </div>
             <div class="w2ui-field">
@@ -22,11 +22,11 @@
                 <div><input name="isPromotionOn" type="checkbox" class="w2ui-input1 w2ui-toggle"/><div><div></div></div ></div> <i class="tgIndicator promotionTgIndicator"></i>
             </div>
             <div class="w2ui-field">
-                <label>Show Special:</label>
+                <label>Show Chef Special:</label>
                 <div><input name="isSpecialOn" type="checkbox" class="w2ui-input1 w2ui-toggle"/><div><div></div></div ></div> <i class="tgIndicator specialTgIndicator"></i>
             </div>
             <div class="w2ui-field">
-                <label>Description <br/> of Promotion:</label>
+                <label>Promotion <br/> Content:</label>
                 <div>
                     <textarea name="promotion" type="text" style="width: 385px; height: 130px; resize: none"></textarea>
                 </div>
@@ -39,10 +39,16 @@
             </div>
         </div>
 
-        <div class="w2ui-buttons">
+        <div class="w2ui-buttons" style="text-align: left">
             <button class="btn btn-green" name="save">Save</button>
-            <button class="btn btn-blue btn-left" name="preview">Preview</button>
-            <button class="btn btn-orange" name="reset">Reset</button>
+            <button class="btn btn-preview btn-blue" name="preview" title="Preview Website as a medium size WIDE screen laptop"><i class="fa fa-laptop"></i> Wide Screen(Med)</button>
+            <button class="btn btn-preview btn-blue" name="preview2" title="Preview Website as a small size wide screen laptop"><i class="fa fa-laptop"></i> Wide Screen(Small)</button>
+            <button class="btn btn-preview btn-blue" name="ipadLand" title="Preview Website as an iPad - Landscape"><i class="fa fa-tablet"></i> iPad (Land)</button>
+            <button class="btn btn-preview btn-blue" name="ipadPort" title="Preview Website as an iPad - Portrait"><i class="fa fa-tablet"></i> iPad (Port)</button>
+<!--
+            <button class="btn btn-preview btn-blue" name="iphoneLand" title="Preview Website as an iPad - Portrait"><i class="fa fa-mobile-phone"></i> iPhone (Land)</button>
+            <button class="btn btn-preview btn-blue" name="iphonePort" title="Preview Website as an iPad - Portrait"><i class="fa fa-mobile-phone"></i> iPhone (Port)</button>
+-->
         </div>
     </div>
     <div id="alertContainer"></div>

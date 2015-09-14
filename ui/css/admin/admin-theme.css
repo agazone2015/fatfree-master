@@ -39,8 +39,11 @@ tr[id$='rec_bottom'] { display: none!important;}
 .ajaxMsgControl { width: 100%; height: 55px;position: absolute; bottom: 0; text-align: center; border-top: 1px solid #8a8a8a; background-color: white}
 
 .w2ui-field { position: relative;}
-.tgIndicator { position: absolute; top: 10px; left: 200px;}
-.btn-left { position: absolute; left: 20px;}
+.w2ui-field>label { width: 160px;}
+.w2ui-field>div { margin-left: 168px; }
+.tgIndicator { position: absolute; top: 6px; left: 230px;}
+/*.btn-left { position: absolute; left: 20px;}*/
+/*.btn-left-2 { position: absolute; left: 120px;}*/
 .tb-icon { padding-top: 2px!important; color: #be1b21;}
 
 .w2ui-toolbar table.w2ui-button.checked {
