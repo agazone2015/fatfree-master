@@ -10,8 +10,23 @@
             return $this->query;
         }
 
+        /**
+         * SELECT all for ADMIN SECTION ONLY
+         * @param  [[Type]] $cafeId [[Description]]
+         * @return [[Type]] [[Description]]
+         */
+        public function getAllByCafeId ($cafeId) {
+            $this->load(array('cafeId=?', $cafeId));
+            return $this->query;
+        }
+
         public function add() {
             $this->copyFrom('POST');
+            $this->save();
+        }
+
+        public function addFromParam() {
+            $this->copyFrom('PARAMS');
             $this->save();
         }
 
@@ -39,15 +54,16 @@
             return $this->query;
         }
 
+        /**
+         * ONLY FOR USER => isActive = 1
+         * Return all items
+         * @param  integer $cafeId     cafe id
+         * @param  integer $categoryId category id
+         * @return array   list of active items
+         */
         public function getAllByCategoryId($cafeId, $categoryId) {
-            $this->load(
-                    array('cafeId=?', $cafeId),
-                    array('categoryId=?', $categoryId),
-                    array('isActive=?', true)
-                )
-            ;
+            $this->load(array('cafeId=? and categoryId=? and isActive=?', $cafeId, $categoryId, 1));
             return $this->query;
         }
-
     }
 ?>

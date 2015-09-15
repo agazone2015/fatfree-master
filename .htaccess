@@ -15,6 +15,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php [L,QSA]
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
 
+
 #deny access to any php file
 <FilesMatch "\.php$">
     Order Allow,Deny
@@ -27,7 +28,7 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
     Deny from all
 </FilesMatch>
 
-# overwrite 
+# overwrite
 # allow access to any index$.php file
 <FilesMatch "index[0-9]?\.php$">
     Order Allow,Deny

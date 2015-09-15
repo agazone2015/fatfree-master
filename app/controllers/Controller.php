@@ -1,11 +1,11 @@
 <?php
     class Controller {
- 
+
         protected $f3;
         protected $db;
         protected $audit;
 
-        function beforeroute() {        
+        function beforeroute() {
         }
 
         function afterroute() {

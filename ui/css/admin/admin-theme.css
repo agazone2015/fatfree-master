@@ -1,0 +1,118 @@
+/* HACK & WORKAROUND USED:
+*   1. tb-icon: padding-top 2px -> make toolbar icon from fontawesome displayed more vertically centered
+*   2. .w2ui-toolbar table.w2ui-button.checked .w2ui-tb-caption & .w2ui-toolbar table.w2ui-button.checked .w2ui-tb-image
+*           => Make selected button of panel toolbar standout
+*/
+/*
+* basic styling group and reset
+*/
+html { padding: 0; margin: 0; height: 100%; overflow: hidden; font-family: 'Lato', sans-serif;}
+body { padding: 0; margin: 0; height: 100%; overflow: hidden; }
+ul { padding: 0; margin: 0;}
+h1 { margin: 0; }
+textarea { font-size: 16px; font-family: 'Lato', sans-serif; line-height: 20px;}
+#container {
+    padding: 0; margin: 0; height: 100%; overflow-x: hidden; overflow-y: auto;}
+/*
+* top bar styling
+*/
+#topbar {
+    height: 50px; background-color: lightskyblue;}
+/*
+* #content container styling
+*/
+#content { height: calc(100% - 50px); position: relative;}
+#mainContainer { height: 500px; position: relative;}
+tr[id$='rec_bottom'] { display: none!important;}
+.w2ui-marker { background-color: lightgreen;}
+
+/* font-size adjustment
+*/
+.w2ui-reset { font-size: 14px;}
+.w2ui-reset table { font-size: 14px;}
+
+#NewForm { width: 100%; position: relative;}
+#specialForm { display: none; }
+
+.ajaxMsg { width: 100%; height: 100%; position: relative; text-align: center; background-color: #e0e0e0;}
+.ajaxMsgContent { width: 100%; height: 50px; position: relative; top: 50%; transform: translateY(-50%); font-style: italic; }
+.ajaxMsgControl { width: 100%; height: 55px;position: absolute; bottom: 0; text-align: center; border-top: 1px solid #8a8a8a; background-color: white}
+
+.w2ui-field { position: relative;}
+.w2ui-field>label { width: 160px;}
+.w2ui-field>div { margin-left: 168px; }
+.tgIndicator { position: absolute; top: 6px; left: 230px;}
+/*.btn-left { position: absolute; left: 20px;}*/
+/*.btn-left-2 { position: absolute; left: 120px;}*/
+.tb-icon { padding-top: 2px!important; color: #be1b21;}
+
+.w2ui-toolbar table.w2ui-button.checked {
+    background-color: lightcoral;
+    border: 1px solid #be1b21;
+}
+.w2ui-toolbar table.w2ui-button.checked .w2ui-tb-caption, .w2ui-toolbar table.w2ui-button.checked .w2ui-tb-image {
+    color: aliceblue;
+}
+.w2ui-grid .w2ui-grid-body .w2ui-grid-records table tr.w2ui-even:hover {
+    background-color: #be1b21; color: white;
+}
+.w2ui-grid .w2ui-grid-body .w2ui-grid-records table tr.w2ui-odd:hover {
+    background-color: #be1b21; color: white;
+}
+/*
+* File upload CSS
+*/
+#uploadManager { width: 100%; height: 100%; position: relative;}
+#uploadButtonBar { padding: 5px 0; }
+#uploadForm { width: 100%; height: calc(100% - 37px); position: relative;}
+#fileHandler { display: inline-block; width: 400px; height: 150px; border: 3px dashed silver; text-align: center; position: relative; border-radius: 5px;}
+.uploadHint { display: inline-block; color: #909090; width: 270px; }
+#fileSelected { position: absolute; left: 420px; top: 0; width: 500px; height: 100%; box-sizing: border-box; padding: 5px; overflow-x: hidden; overflow-y: auto;}
+#fileSelectedList { height: calc(100% - 20px); overflow-x: hidden; overflow-y: auto;}
+#fileSelectedList .thumbnail { padding: 5px; border: 1px dashed lightcoral; margin: 5px; position: relative;}
+#fileSelectedList .thumbnail .thumb-remove { position: absolute; right: 5px; top: 3px; color: #2B4E71; cursor: pointer;}
+#fileSelectedList .thumbnail span { font-style: italic; display: block;}
+#alertContainer { width: 500px; height: auto; min-height: 100px; position: absolute; bottom: 0; right: 0; transition: 0.3s;}
+
+.gridThumbnail { height: 60px; cursor: pointer;}
+.gridThumbnail:hover { transform: scale(1.4);}
+
+.uploadProgress { width: 100%; height: 40px; box-sizing: border-box; transition: 0.8s; position: relative;}
+.uploadProgress.done { background-color: lightgreen; border: 1px solid green; text-shadow: 0 0 1px #1e1e1e, 0 0 2px #1e1e1e;}
+.uploadProgress.error { background-color: lightcoral; border: 1px solid coral;}
+.uploadProgress a { position: absolute; right: 10px; top: 2px; color: white;}
+.uploadProgress a:hover { transform: scale(1.3);}
+.uploadName { line-height: 20px; display: block; overflow: hidden;}
+.uploadName em { color: white; font-weight: bold;}
+.uploadTrack { height: 11px; overflow: hidden; background-color: rgba(0, 0, 0, 0.7); position: relative; margin-top: 3px;}
+.uploadBar { height: 100%; width: 0; transition: 0.3s; background-color: rgb(73,116,230); }
+
+/*
+* component styling
+*/
+.block { display: block!important;}
+.center-x { margin-left: auto; margin-right: auto;}
+.center-y { position: relative; top: 50%; transform: translateY(-50%);}
+.f-header { text-align: center; padding: 10px; background-color: lightcoral; color: antiquewhite;
+            border-bottom: 1px solid lightgray;}
+.f-row { padding: 5px 10px; position: relative;}
+.f-row.f-control {
+    border-top: 1px solid lightgray; background-color: lightyellow;
+    margin-top: 15px; padding: 10px;}
+.f-label {
+    display: inline-block; min-width: 100px; padding: 10px 5px 10px 5px;}
+.f-input {
+    padding: 0; margin: 0; text-indent: 5px;
+    display: inline-block; height: 28px; width: calc(100% - 10px); border-radius: 2px;
+    border: 1px solid lightgrey; transition: 0.6s; }
+.f-btn {
+    display: inline-block; padding: 6px 10px; font-weight: bold;
+    position: relative; transition: 0.5s;}
+.f-btn:active {
+    top: 2px;}
+
+/*
+* css for login form
+*/
+.form-login { width: 80%; max-width: 400px; margin-top: 50px; background-color: lightblue;
+    -webkit-box-shadow: 0 0 15px #333; -moz-box-shadow: 0 0 15px #333; box-shadow: 0 0 15px #333;}

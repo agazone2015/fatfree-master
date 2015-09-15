@@ -1,0 +1,28 @@
+<check if="{{ @isSpecialOn }}">
+    <aside id="specialMenu">
+        <strong id="specialHeader">Chef Special Today</strong>
+        <div id="specialContentWrapper">
+            <ul id="specialContent">
+                <repeat group="{{ @specials }}" value="{{ @special }}">
+                    <li>
+                        <a href="" class="itemName"><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;{{@special.itemName}}</a>
+                        <span class="itemDesc">{{@special.description}}</span>
+                    </li>
+                </repeat>
+            </ul>
+        </div>
+    </aside>
+</check>
+<check if="{{ @isPromotionOn }}">
+    <section id="promotion">
+        <strong class="promotionHeader"><i class="fa fa-star-o"></i> Promotion</strong>
+        <p class="promotionContent">
+            {{ @promotionText }}
+        </p>
+    </section>
+</check>
+<script>
+    window.onload = function () {
+        $('#specialContentWrapper').perfectScrollbar();
+    }
+</script>
